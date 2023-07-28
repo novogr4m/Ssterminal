@@ -4,7 +4,7 @@ import ComponentOutputType = SsTerminal.ComponentOutputType;
 
 /**
  * 热榜命令
- * @author yupi
+ * 
  */
 const hotCommand: CommandType = {
   func: "hot",

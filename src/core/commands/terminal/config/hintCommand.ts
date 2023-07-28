@@ -3,7 +3,7 @@ import { useTerminalConfigStore } from "./store/terminalConfigStore";
 
 /**
  * 提示命令
- * @author yupi
+ * 
  */
 const hintCommand: CommandType = {
   func: "hint",

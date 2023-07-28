@@ -3,7 +3,7 @@ import { defineAsyncComponent } from "vue";
 import ComponentOutputType = SsTerminal.ComponentOutputType;
 
 /**
- * 摸鱼命令
+ * 摸鱼游戏命令
  */
 const moyuCommand: CommandType = {
   func: "game",

@@ -14,6 +14,7 @@ export const useUserStore = defineStore("user", {
     }),
     getters: {},
     // 持久化
+    //persist对象可以配置一下属性：
     persist: {
         key: "user-store",
         storage: window.localStorage,

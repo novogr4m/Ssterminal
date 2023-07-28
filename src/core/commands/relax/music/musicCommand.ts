@@ -4,7 +4,7 @@ import ComponentOutputType = SsTerminal.ComponentOutputType;
 
 /**
  * 音乐命令
- * @author yupi
+ * @author 
  */
 const musicCommand: CommandType = {
   func: "music",

@@ -4,7 +4,7 @@ import ComponentOutputType = SsTerminal.ComponentOutputType;
 
 /**
  * 定时命令
- * @author yupi
+ * 
  */
 const timingCommand: CommandType = {
   func: "timing",

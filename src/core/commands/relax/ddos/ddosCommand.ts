@@ -4,7 +4,7 @@ import ComponentOutputType = SsTerminal.ComponentOutputType;
 
 /**
  * DDOS 命令（整活）
- * @author yupi
+ * 
  */
 const ddosCommand: CommandType = {
   func: "ddos",
