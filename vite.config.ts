@@ -23,5 +23,6 @@ export default defineConfig({
       resolvers: [AntDesignVueResolver()],
     }),
     process.env.BUILD_CRX && chromeExtension(),
-  ].filter(Boolean),
+    ].filter(Boolean),
+  
 });

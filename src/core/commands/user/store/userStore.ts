@@ -19,12 +19,12 @@ export const useUserStore = defineStore("user", {
         key: "user-store",
         storage: window.localStorage,
 
-        beforeRestore: (context) => {
-            console.log("load userStore data start");
-        },
-        afterRestore: (context) => {
-            console.log("load userStore data end");
-        },
+        // beforeRestore: (context) => {
+        //     console.log("load userStore data start");
+        // },
+        // afterRestore: (context) => {
+        //     console.log("load userStore data end");
+        // },
     },
 
     actions: {

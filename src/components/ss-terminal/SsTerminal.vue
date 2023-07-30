@@ -404,10 +404,10 @@ onMounted(() => {
   } else {
     terminal.writeTextOutput(
       `👀Welcome to SsTerminal, coolest browser index for geeks!` +
-        `<a href="//github.com/liyupi/yuindex" target='_blank'> GitHub Open Source</a>`
+        `<a href="" target='_blank'> GitHub Open Source</a>`
     );
     terminal.writeTextOutput(
-      `🐱‍👤Author <a href="//docs.qq.com/doc/DUFFRVWladXVjeUxW" target="_blank">SpikeChou</a>` +
+      `🐱‍👤Author <a href="" target="_blank">SpikeChou</a>` +
         `: please input 'help' to enjoy`
     );
       terminal.writeTextOutput(
