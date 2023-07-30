@@ -428,7 +428,7 @@ function handleClickWrapper(event: Event): void {
 }
 
 defineExpose({
-  terminal,
+  terminal
 });
 </script>
 

@@ -31,7 +31,7 @@ export const useUserStore = defineStore("user", {
         async getAndSetLoginUser() {
             const res: any = await getLoginUser();
             if (res?.code === 0 && res.data) {
-                this.loginUser = res.data;
+                this.loginUser = res.data;  //设置当前用户
             } else {
                 console.error("登录失败");
                 //pinia更新的时候会有历史记录，$reset可以将数据重置到最开始时
