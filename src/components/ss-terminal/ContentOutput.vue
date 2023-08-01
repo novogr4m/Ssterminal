@@ -49,6 +49,12 @@ const outputTagColor = computed((): string => {
 </script>
 
 <style scoped>
+
+/* deep应用场景：
+    1、引用第三方组件库，只需要在当前页面修改组件库样式而不污染全局样式。
+    在含有scoped的style里写样式对子组件是不生效的
+    2、在父组件中的样式无法修改子组件的样式，可以使用深度作用选择器
+*/
 .content-output :deep(.ant-tag) {
   border-radius: 0;
   font-size: 16px;

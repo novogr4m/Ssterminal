@@ -5,7 +5,7 @@ import ComponentOutputType = SsTerminal.ComponentOutputType;
 
 /**
  * 帮助命令
- * @author yupi
+ * 
  */
 const helpCommand: CommandType = {
   func: "help",

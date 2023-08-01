@@ -16,7 +16,7 @@ app.use(router);
 
 // 状态管理
 const pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
+pinia.use(piniaPluginPersistedstate); //持久化插件
 app.use(pinia);
 
 app.mount("#app");

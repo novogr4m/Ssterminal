@@ -50,7 +50,6 @@ const commandList: CommandType[] = [
     pingCommand,
     musicCommand,
     ddosCommand,
-  
     welcomeCommand,
     backgroundCommand,
     articleCommand,
@@ -67,6 +66,8 @@ const commandList: CommandType[] = [
  */
 const commandMap: Record<string, CommandType> = {};
 
+//设置命令map
+//eg:help:{func:....,alias:....}
 commandList.forEach((command) => {
     commandMap[command.func] = command;
     command.alias?.forEach((name) => {

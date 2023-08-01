@@ -12,10 +12,13 @@ import { onMounted, ref } from "vue";
 import { useUserStore } from "@/core/commands/user/store/userStore";
 import { storeToRefs } from "pinia";
 
+//获取终端实例
 const terminalRef = ref();
 
+//提交指令（回车）
 const onSubmitCommand = async (inputText: string) => {
     if (!inputText) {
+        //没有输入则直接return
         return;
     }
     const terminal = terminalRef.value.terminal;
