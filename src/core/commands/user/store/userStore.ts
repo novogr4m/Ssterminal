@@ -30,7 +30,7 @@ export const useUserStore = defineStore("user", {
     actions: {
         async getAndSetLoginUser() {
             const res: any = await getLoginUser();
-            if (res?.code === 0 && res.data) {
+            if (res?.code === 200 && res.data) {
                 this.loginUser = res.data;  //设置当前用户
             } else {
                 console.error("登录失败");
@@ -46,8 +46,9 @@ export const useUserStore = defineStore("user", {
         //用户登录
         async login(username: string, password: string) {
             const res: any = await userLogin(username, password);
-            if (res?.code === 0) {
-                //登陆成功
+            // console.log(res);
+            if (res?.code === 200) {
+                //登陆成功，设置用户信息                
                 this.setLoginUser(res.data);
             }
             // return res;
@@ -57,7 +58,7 @@ export const useUserStore = defineStore("user", {
 
         async logout() {
             const res: any = await userLogout();
-            if (res?.code == 0) {
+            if (res?.code == 200) {
                 this.setLoginUser(LOCAL_USER);
             }
             return { code: res?.code, message: res.message ? res.message : null };

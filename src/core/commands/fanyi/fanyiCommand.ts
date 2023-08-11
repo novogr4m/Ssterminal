@@ -43,7 +43,7 @@ const fanyiCommand: CommandType = {
       from,
       to,
     });
-    if (res?.code === 0) {
+    if (res?.code === 200) {
       terminal.writeTextSuccessResult(
         `翻译结果：${res.data.trans_result[0].dst}`
       );

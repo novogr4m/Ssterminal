@@ -57,8 +57,12 @@ const registerCommand: CommandType = {
             terminal.writeTextErrorResult("请输入邮箱");
             return;
         }
+        if (password != confirmPwd) {
+            terminal.writeTextErrorResult("两次输入的密码不一致");
+            return;
+        }
         const res: any = await userRegister(username, password, email);
-        if (res?.code === 0) {
+        if (res?.code === 200) {
             terminal.writeTextSuccessResult("注册成功");
         } else {
             terminal.writeTextErrorResult(res?.message ?? "注册失败");

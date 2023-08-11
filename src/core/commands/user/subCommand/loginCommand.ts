@@ -42,7 +42,7 @@ const loginCommand: CommandType = {
         //调用store的登录方法
         const res: any =await login(username, password);
              
-        if (res?.code==0) {
+        if (res?.code==200) {
             terminal.writeTextSuccessResult("登录成功");
         } else {
             terminal.writeTextErrorResult(res?.message ?? "登录失败");

@@ -4,7 +4,7 @@ import TaskType = Todo.TaskType;
 
 /**
  * 添加任务命令
- * @author yupi
+ *
  */
 const addCommand: CommandType = {
   func: "add",
@@ -16,7 +16,7 @@ const addCommand: CommandType = {
       alias: ["n"],
       type: "string",
       required: true,
-    },
+      },
   ],
   action(options, terminal) {
     const { name } = options;

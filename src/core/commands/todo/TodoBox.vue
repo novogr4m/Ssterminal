@@ -46,6 +46,8 @@ const { taskList, deleteTask } = useTodoStore();
 const doDelete = (index: number) => {
   deleteTask(index);
 };
+
 </script>
+
 
 <style scoped></style>

@@ -13,7 +13,7 @@ const logoutCommand: CommandType = {
     async action(options, terminal) {
         const { logout } = useUserStore();
         const res: any = await logout();
-        if (res?.code === 0) {
+        if (res?.code === 200) {
             terminal.writeTextSuccessResult("已退出登录");
         } else {
             terminal.writeTextErrorResult(res?.message ?? "注销失败");

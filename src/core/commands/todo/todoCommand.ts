@@ -2,10 +2,11 @@ import { CommandType } from "../../command";
 import { defineAsyncComponent } from "vue";
 import ComponentOutputType = SsTerminal.ComponentOutputType;
 import addCommand from "./subCommands/addCommand";
+import updateCommand from "./subCommands/updateCommand";
 
 /**
  * 待办事项命令
- * @author yupi
+ * 
  */
 const todoCommand: CommandType = {
   func: "todo",
@@ -20,7 +21,8 @@ const todoCommand: CommandType = {
   ],
   options: [],
   subCommands: {
-    add: addCommand,
+      add: addCommand,
+      update:updateCommand
   },
   collapsible: true,
   action(options, terminal) {
