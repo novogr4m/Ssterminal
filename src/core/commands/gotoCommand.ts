@@ -1,6 +1,4 @@
 import { CommandType } from "../command";
-
-
 /**
  * 跳转命令
  * 

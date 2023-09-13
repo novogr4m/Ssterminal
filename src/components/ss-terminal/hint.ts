@@ -51,9 +51,9 @@ const useHint = () => {
   /**
    * 输入提示防抖
    */
-  const debounceSetHint = _.debounce(function (inputText: string) {
+  const debounceSetHint = _.throttle(function (inputText: string) {
     setHint(inputText);
-  }, 500);
+  }, 200);
 
   return {
     hint,

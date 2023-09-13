@@ -1,6 +1,6 @@
 import { CommandType } from "../../../command";
 import { useTerminalConfigStore } from "./store/terminalConfigStore";
-import myAxios from "../../../../plugins/myAxios";
+import request from "@/utils/request";
 
 /**
  * 切换终端背景
@@ -27,9 +27,10 @@ const backgroundCommand: CommandType = {
     const { setBackground } = useTerminalConfigStore();
     if (!url) {
       // 随机获取壁纸
-      const res = await myAxios.post("/background/get/random");
+      const res = await request.post("/background/get/random");
       setBackground(res.data);
     }
+      //有地图地址
     setBackground(url);
   },
 };

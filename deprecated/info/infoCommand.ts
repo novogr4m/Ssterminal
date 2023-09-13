@@ -1,4 +1,4 @@
-import { CommandType } from "../../../command";
+import { CommandType } from "../../src/core/command";
 import { defineAsyncComponent } from "vue";
 import ComponentOutputType = SsTerminal.ComponentOutputType;
 

@@ -1,5 +1,5 @@
 import { CommandType } from "../../../command";
-import { useTodoStore } from "../todoStore";
+import { useTodoStore } from "../store/todoStore";
 import TaskType = Todo.TaskType;
 
 /**
@@ -31,7 +31,7 @@ const updateCommand: CommandType = {
      action(options, terminal) {
         const { index ,name} = options;
         if (!index) {
-            terminal.writeTextErrorResult("请输入需要修改的任务序号");
+            terminal.writeTextErrorResult("请输入需要修改的任务序号（0开始）");
             return;
         }
         if (!name) {

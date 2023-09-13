@@ -9,9 +9,13 @@ import TerminalType = SsTerminal.TerminalType;
  * @param terminal
  */
 export const registerShortcuts = (terminal: TerminalType) => {
-  document.onkeydown = (e) => {
+    //document.onkeydown主要应用是游戏开发和快捷键设置
+    //该事件会返回一些属性，可以帮助我们检测键盘的按键情况。
+    document.onkeydown = (e) => {
     // console.log(e);
-    let key = e.key;
+        let key = e.key;
+        // console.log('iamkey',key);
+        
     // 自动聚焦输入框
     if (key >= "a" && key <= "z" && !e.metaKey && !e.shiftKey && !e.ctrlKey) {
       terminal.focusInput();
@@ -79,24 +83,27 @@ export const shortcutList: ShortcutType[] = [
     },
   },
   {
-    code: "Tab",
+      code: "Tab",
+      desc:"补全输入||聚焦输入框",
     action(e, terminal) {
-      e.preventDefault();
+      e.preventDefault();   //阻止浏览器的默认行为
       if (terminal.isInputFocused()) {
-        terminal.setTabCompletion();
+        terminal.setTabCompletion();    // 补全
       } else {
-        terminal.focusInput();
+        terminal.focusInput();//聚焦输入框
       }
     },
   },
   {
-    code: "Backspace",
+      code: "Backspace",
+      desc:"聚焦输入框",
     action(e, terminal) {
       terminal.focusInput();
     },
   },
   {
-    code: "Enter",
+      code: "Enter",
+      desc:"聚焦输入框",
     action(e, terminal) {
       terminal.focusInput();
     },

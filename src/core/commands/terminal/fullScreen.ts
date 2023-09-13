@@ -9,7 +9,7 @@ import { CommandType } from "../../command";
 const fullScreenCommand: CommandType = {
     func: 'fullscreen',
     name: '页面全屏',
-    alias: [],
+    alias: ['fl'],
     params: [],
     options: [],
     action(): void{
@@ -18,6 +18,8 @@ const fullScreenCommand: CommandType = {
         if (!isFull) {
             //不是则全屏
             document.documentElement.requestFullscreen();
+            console.log(document.documentElement);
+            
         } else {
             //已是状态输入命令则退出全屏
             document.exitFullscreen();

@@ -14,21 +14,21 @@ import backgroundCommand from "./commands/terminal/config/backgroundCommand";
 import resetCommand from "./commands/terminal/config/resetCommand";
 import fanyiCommand from "./commands/fanyi/fanyiCommand";
 import helpCommand from "./commands/terminal/help/helpCommand";
-import infoCommand from "./commands/terminal/info/infoCommand";
-import pingCommand from "./commands/pingCommand";
+import pingCommand from "./commands/relax/pingCommand";
 import hintCommand from "./commands/terminal/config/hintCommand";
 import todoCommand from "./commands/todo/todoCommand";
 import musicCommand from "./commands/relax/music/musicCommand";
-import ddosCommand from "./commands/relax/ddos/ddosCommand";
 import gameCommand from "./commands/relax/game/gameCommand";
 import shortcutCommand from "./commands/terminal/shortcut/shortcutCommand";
 import welcomeCommand from "./commands/terminal/config/welcomeCommand";
 import hotCommand from "./commands/hot/hotCommand";
 import varbookCommand from "./commands/varbook/varbookCommand";
-import fullScreenCommand from "./commands/search/fullScreen";
+import fullScreenCommand from "./commands/terminal/fullScreen";
 import huyaCommand from "./commands/relax/huyaCommand";
 import UICommand from './commands/uidoc/index';
 import articleCommand from "./commands/article/articleCommand";
+import weatherCommand from './commands/weather/weatherCommand';
+import bilibiliCommand from "./commands/bilibiliVideo/videoCommand";
 /**
  * 命令列表（数组元素顺序会影响 help 命令的展示顺序）
  */
@@ -36,10 +36,13 @@ const commandList: CommandType[] = [
     ...userCommands,
     shortcutCommand,
     ...UICommand,
+    articleCommand,
     gotoCommand,
     ...searchCommands,
+    weatherCommand,
     varbookCommand,
     hotCommand,
+    bilibiliCommand,
     gameCommand,
     huyaCommand,
     todoCommand,
@@ -49,16 +52,15 @@ const commandList: CommandType[] = [
     fanyiCommand,
     pingCommand,
     musicCommand,
-    ddosCommand,
     welcomeCommand,
     backgroundCommand,
-    articleCommand,
     resetCommand,
     hintCommand,
     fullScreenCommand,
     historyCommand,
     helpCommand,
-    infoCommand,
+
+
 ];
 
 /**

@@ -20,6 +20,7 @@ const useHistory = (
     return commandList;
   };
 
+    //下键回调
   const showNextCommand = () => {
     console.log(commandHistoryPos.value, commandList, inputCommand);
     if (commandHistoryPos.value < commandList.length - 1) {
@@ -31,12 +32,17 @@ const useHistory = (
     }
   };
 
+    //上键回调
   const showPrevCommand = () => {
     console.log(commandHistoryPos.value, commandList, inputCommand);
-    if (commandHistoryPos.value >= 1) {
-      commandHistoryPos.value--;
-      inputCommand.value.text = commandList[commandHistoryPos.value].text;
-    }
+    // if (commandHistoryPos.value >= 1) {
+    //   commandHistoryPos.value--;
+    //   inputCommand.value.text = commandList[commandHistoryPos.value].text;
+    // }
+      if (commandHistoryPos.value >= 1) {
+          commandHistoryPos.value--;
+          inputCommand.value.text = commandList[commandHistoryPos.value].text;
+      }
   };
 
   return {

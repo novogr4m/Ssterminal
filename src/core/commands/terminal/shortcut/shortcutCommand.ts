@@ -4,7 +4,7 @@ import ComponentOutputType = SsTerminal.ComponentOutputType;
 
 /**
  * 快捷键命令
- * @author yupi
+ * @author spike
  */
 const shortcutCommand: CommandType = {
   func: "shortcut",

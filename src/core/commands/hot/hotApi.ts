@@ -1,8 +1,8 @@
-import myAxios from "../../../plugins/myAxios";
+import request from "@/utils/request";
 
 /**
  * 获取音乐热榜
  */
 export const listHotMusics = async () => {
-  return await myAxios.post("/music/list/hot", {});
+  return await request.post("/music/hot", {});
 };

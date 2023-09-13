@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^3.2.10",
-    "axios": "^0.27.2",
+    "axios": "^1.4.0",
     "dayjs": "^1.11.3",
     "getopts": "^2.3.0",
     "lodash": "^4.17.21",
@@ -49,6 +49,7 @@
     "typescript": "^4.6.4",
     "unplugin-vue-components": "^0.21.1",
     "vite": "^2.9.9",
+    "vite-plugin-compression": "^0.5.1",
     "vue-tsc": "^0.38.4"
   }
 }

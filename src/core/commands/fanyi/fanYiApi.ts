@@ -1,4 +1,4 @@
-import myAxios from "../../../plugins/myAxios";
+import request from "@/utils/request";
 
 /**
  * 翻译文本
@@ -12,5 +12,5 @@ export const translate = async (
   if (!keywords) {
     return null;
   }
-  return await myAxios.post("/fanyi/translate", { keywords, config });
+  return await request.post("/fanyi/translate", { keywords, config });
 };

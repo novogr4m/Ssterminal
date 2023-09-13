@@ -1,3 +1,5 @@
+//namespace代表命名空间，可以对接口、类等进行分类管理，相当于一个集合的代表。
+//declare代表全局，有了这个声明，不需要引入，可以直接使用。
 declare namespace SsTerminal {
   /**
    * 输出状态

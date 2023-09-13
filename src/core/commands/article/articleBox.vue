@@ -1,19 +1,17 @@
 <template>
-    <a-spin :spinning="spinning">
-        <InfiniteList :data="articleList" :width="'100%'" :height="500" :itemSize="50" class="article"
-            v-slot="{ item, index }" id="infintielist">
-            <a style="width: 100%; cursor: pointer; overflow: hidden" @click="handleClick(item.article_id)">
-                <div class="title">
-                    {{ item.title }}
-                </div>
-                <div class="brief">
-                    {{ item.brief_content }}
-                </div>
-            </a>
-
-        </InfiniteList>
-
-    </a-spin>
+    <div> <a-spin :spinning="spinning">
+            <InfiniteList :data="articleList" :width="'100%'" :height="500" :itemSize="50" class="article"
+                v-slot="{ item, index }" id="infintielist">
+                <a style="width: 100%; cursor: pointer; overflow: hidden" @click="handleClick(item.article_id)">
+                    <div class="title">
+                        {{ item.title }}
+                    </div>
+                    <div class="brief">
+                        {{ item.brief_content }}
+                    </div>
+                </a>
+            </InfiniteList>
+        </a-spin></div>
 </template>
 
 <script setup lang="ts">
@@ -21,8 +19,8 @@ import InfiniteList from 'vue3-infinite-list';
 import { getRandomArticle } from "./articleApi"
 import { ref, onMounted } from "vue";
 import _ from "lodash";
-// 声明 porps对象
 
+// 声明 porps对象
 //组件参数接口
 interface articleProps {
     size: number
@@ -35,7 +33,7 @@ const { size = 20 } = props;
 // 加载中
 let spinning = ref(true);
 //保存返回的文章数组
-let articleList = ref([]);
+let articleList = ref<any>([]);
 
 const getArticles = async () => {
     const data = [...articleList.value];
@@ -51,7 +49,7 @@ const getArticles = async () => {
         });
         articleList.value = data;
     }
-    console.log('iam article list', articleList.value);
+    // console.log('iam article list', articleList.value);
 }
 
 const handleClick = (aid: number) => {
@@ -67,11 +65,12 @@ const scrollEvent = (e: any) => {
     }
 }
 
+//组件被挂载时请求文章
 onMounted(() => {
     getArticles();
     // //使用lodash库节流
     document.getElementById('infintielist')
-        ?.addEventListener("scroll", _.debounce(scrollEvent, 200));
+        ?.addEventListener("scroll", _.throttle(scrollEvent, 200));
     spinning.value = false;
 })
 
@@ -112,7 +111,7 @@ onMounted(() => {
     border-radius: 10px;
 }
 
-a{
+a {
     color: #eb2f96;
 }
 </style>

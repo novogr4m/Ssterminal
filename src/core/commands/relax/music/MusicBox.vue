@@ -29,7 +29,7 @@ const errorHint = ref("");
 onMounted(async () => {
   // 搜索音乐，返回 id
   const res: any = await getSingleMusic(name.value);
-  if (res?.code === 0) {
+  if (res?.code === 200) {
     const music = res.data;
     musicPath.value = `//music.163.com/outchain/player?type=2&id=${music.id}&auto=1&height=66`;
   } else {

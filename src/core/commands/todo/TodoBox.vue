@@ -30,16 +30,9 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from "vue";
-import { useTodoStore } from "./todoStore";
-import MyDayjs from "../../../plugins/myDayjs";
 
-interface TodoBoxProps {
-  today: boolean;
-}
-
-const props = withDefaults(defineProps<TodoBoxProps>(), {});
-const { today } = toRefs(props);
+import { useTodoStore } from "./store/todoStore";
+import MyDayjs from "@/utils/myDayjs";
 
 const { taskList, deleteTask } = useTodoStore();
 

@@ -17,7 +17,7 @@ const userCommand: CommandType = {
   params: [
     {
       key: "subCommand",
-      desc: "子命令",
+      desc: "子命令（register、login、logout）",
       required: true,
     },
   ],

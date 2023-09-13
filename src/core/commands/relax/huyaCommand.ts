@@ -13,6 +13,7 @@ const huyaCommand: CommandType = {
         {
             key: "word",
             desc: "搜索内容|搜索房间号",
+            required:true
         },
     ],
     options: [

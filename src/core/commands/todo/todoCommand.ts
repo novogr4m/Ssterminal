@@ -15,7 +15,7 @@ const todoCommand: CommandType = {
   params: [
     {
       key: "subCommand",
-      desc: "子命令",
+      desc: "子命令（add、update）",   
       required: true,
     },
   ],

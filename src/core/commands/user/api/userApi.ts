@@ -1,4 +1,5 @@
 import request from "@/utils/request"
+import tokenType = User.tokenType
 /**
  * 用户登录
  * @param username
@@ -44,6 +45,6 @@ export const userRegister = (
 /**
  * 获取当前登录用户
  */
-export const getLoginUser = async () => {
-    return await request.post("/user/current");
+export const getLoginUser = async (token:tokenType) => {
+    return await request.post("/user/current",token);
 };
